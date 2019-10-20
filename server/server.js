@@ -50,6 +50,6 @@ app.delete('/usuario/:id', function (req, res) {
     res.json('Usuario');
 });
 
-app.listen(3000, () => {
-    console.log(`Server corriendo en el puerto 3000`);
+app.listen(port, () => {
+    console.log(`Server corriendo en el puerto ${port}`);
 });
