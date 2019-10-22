@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const path = require('path');
+
 
 const bodyParser = require('body-parser');
 const colors = require('colors');
@@ -10,9 +12,6 @@ const app = express();
 
 // Configuraciones
 const {port, urlDB} = require('./config/config');
-
-
-
 
 
 
@@ -27,6 +26,8 @@ app.use(bodyParser.json());
 app.use(require('./routes/index'));
 
 
+// Habilitar el public
+app.use( express.static(path.resolve(__dirname, '../public')) );
 
 
 
