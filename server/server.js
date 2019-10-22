@@ -13,6 +13,9 @@ const {port, urlDB} = require('./config/config');
 
 
 
+
+
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -20,7 +23,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.use( require('./routes/usuario') );
+// Configuraciones de las rutas
+app.use(require('./routes/index'));
+
+
 
 
 
